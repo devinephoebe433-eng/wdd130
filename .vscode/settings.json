@@ -1,10 +1,14 @@
 {
   // Auto Save when focus changes (allows formatOnSave to work)
 <<<<<<< HEAD
+<<<<<<< HEAD
   "files.autoSave": "afterDelay",
 =======
   "files.autoSave": "onFocusChange",
 >>>>>>> 3190efaf578d3a1394d2639b747309fbc7016130
+=======
+  "files.autoSave": "onFocusChange",
+>>>>>>> 2dd18465fe3771b674fca84f0efc0e5670b821ec
   // Editor settings
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
@@ -61,6 +65,7 @@
   "chat.commandCenter.enabled": false,
   "inlineChat.accessibleDiffView": "off",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "terminal.integrated.initialHint": false,
   "cSpell.words": [
     "Devine",
@@ -71,4 +76,7 @@
 =======
   "terminal.integrated.initialHint": false
 >>>>>>> 3190efaf578d3a1394d2639b747309fbc7016130
+=======
+  "terminal.integrated.initialHint": false
+>>>>>>> 2dd18465fe3771b674fca84f0efc0e5670b821ec
 }
