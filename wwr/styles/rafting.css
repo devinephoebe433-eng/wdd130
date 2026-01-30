@@ -129,15 +129,35 @@ header {
     text-align: center;
 }
 
-/* Article overlay example (if used) */
+/* Article overlay */
 .hero article {
     position: absolute;
-    bottom: 18px;
-    left: 18px;
-    right: 18px;
-    background-color: rgba(233,216,166,0.9);
-    padding: 16px;
-    border-radius: 6px;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    max-width: 400px;
+    background-color: rgba(233,216,166,0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.hero article img {
+    float: right;
+    width: 60px;
+    height: auto;
+    margin: 0 0 12px 16px;
+    opacity: 1;
+    object-fit: contain;
+    display: block;
+}
+
+.hero article p {
+    margin: 0;
+    color: var(--accent1-color);
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 /* --- 7. History & Content Sections --- */
