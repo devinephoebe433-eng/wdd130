@@ -1,16 +1,14 @@
 /* --- CSS Variables --- */
 :root {
     --primary-color: #730073;
-    /* Deep Purple */
     --secondary-color: #d29499;
-    /* Dusty Rose */
     --accent1-color: #222222;
-    /* Dark Charcoal */
     --accent2-color: #e9d8a6;
-    /* Sand Background */
     --heading-font: "Georgia", "Times New Roman", serif;
     --body-font: "Helvetica Neue", Arial, sans-serif;
     --white: #ffffff;
+    --max-width: 1100px;
+    --container-padding: 18px;
 }
 
 /* --- 1. Global Reset --- */
@@ -21,12 +19,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 /* --- 2. Body Styles --- */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
     line-height: 1.6;
-    /* Critical for passing readability audits */
+    background: linear-gradient(180deg, #fbfbfb 0%, #f6f6f8 100%);
+    padding: 20px;
 }
 
 /* --- 3. Layout Structure --- */
@@ -34,97 +37,107 @@ body {
 header,
 main,
 footer {
-    width: 840px;
-    margin: 0 auto;
+    max-width: var(--max-width);
+    margin: 0 auto 24px;
+    padding: 0 var(--container-padding);
 }
 
 /* --- 4. Typography --- */
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
-}
-
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+    margin-bottom: 0.5rem;
 }
 
 /* --- 5. Navigation & Header --- */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
     background-color: var(--accent2-color);
-    padding: 20px;
+    padding: 14px;
+    border-radius: 8px;
 }
 
-header img {
-    width: 100px;
-    /* Adjust based on your logo size */
+.logo {
+    width: 80px;
     height: auto;
+    display: block;
 }
 
-nav a {
-    text-decoration: none;
+/* Accessible nav list */
+.site-nav {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: 8px 12px;
     color: var(--primary-color);
-    font-weight: bold;
-    padding: 0 10px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color .18s ease, color .18s ease, transform .08s ease;
 }
 
-nav a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+.site-nav a:hover,
+.site-nav a:focus {
+    background-color: rgba(115, 0, 115, 0.08);
+    color: #3a003a;
+    transform: translateY(-1px);
 }
 
 /* --- 6. Hero Div with Overlays (Crucial for W03) --- */
 .hero {
     position: relative;
-    /* Allows absolute positioning for children */
     margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    background: #000;
+    min-height: 220px;
 }
 
 .hero img {
     display: block;
     width: 100%;
     height: auto;
+    object-fit: cover;
+    opacity: 0.95;
 }
 
-/* Position the H1 over the top of the image */
+/* Overlay H1 */
 .hero h1 {
     position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(34, 34, 34, 0.7);
-    /* Semi-transparent for contrast */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, rgba(34,34,34,0.82), rgba(115,0,115,0.65));
     color: var(--white);
-    padding: 10px 0;
+    border-radius: 6px;
+    font-size: clamp(1.25rem, 2.4vw, 2rem);
+    text-align: center;
 }
 
-/* Position the article over the bottom of the image */
+/* Article overlay example (if used) */
 .hero article {
     position: absolute;
-    bottom: 30px;
-    left: 50px;
-    right: 50px;
-    background-color: rgba(233, 216, 166, 0.85);
-    /* Accent2 with opacity */
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.hero article img {
-    float: right;
-    width: 150px;
-    height: auto;
-    margin-left: 15px;
-    border: 2px solid var(--primary-color);
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+    background-color: rgba(233,216,166,0.9);
+    padding: 16px;
+    border-radius: 6px;
 }
 
 /* --- 7. History & Content Sections --- */
@@ -134,23 +147,74 @@ section h2 {
     margin-bottom: 10px;
 }
 
-/* --- 8. Footer --- */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--accent2-color);
-    margin-top: 30px;
+/* Content lists */
+.about-values ul {
+    list-style: disc;
+    margin-left: 1.25rem;
+    padding-left: 0.5rem;
 }
 
-/* Audit Fix: Ensure social links don't have underlines on icons */
+/* --- 8. Footer --- */
+footer {
+    margin-top: 6px;
+    background: transparent;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .socialmedia a {
     text-decoration: none;
 }
 
 .socialmedia img {
-    width: 32px;
+    width: 28px;
     height: auto;
-    margin-left: 10px;
+    display: block;
+    filter: grayscale(10%) contrast(90%);
+    transition: transform .15s ease, filter .15s ease;
+}
+
+.socialmedia a:hover img,
+.socialmedia a:focus img {
+    transform: translateY(-3px);
+    filter: none;
+}
+
+/* Small screens */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 6px;
+        margin-top: 8px;
+        flex-wrap: wrap;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Accessibility focus outlines */
+a:focus {
+    outline: 3px solid rgba(115,0,115,0.16);
+    outline-offset: 2px;
 }
