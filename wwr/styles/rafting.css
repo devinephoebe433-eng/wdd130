@@ -19,7 +19,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -106,7 +107,7 @@ header {
     margin: 20px 0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     background: #000;
     min-height: 220px;
 }
@@ -127,7 +128,7 @@ header {
     transform: translate(-50%, -50%);
     margin: 0;
     padding: 12px 20px;
-    background: linear-gradient(90deg, rgba(34,34,34,0.82), rgba(115,0,115,0.65));
+    background: linear-gradient(90deg, rgba(34, 34, 34, 0.82), rgba(115, 0, 115, 0.65));
     color: var(--white);
     border-radius: 6px;
     font-size: clamp(1.25rem, 2.4vw, 2rem);
@@ -141,10 +142,10 @@ header {
     left: 24px;
     right: 24px;
     max-width: 400px;
-    background-color: rgba(233,216,166,0.95);
+    background-color: rgba(233, 216, 166, 0.95);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hero article img {
@@ -171,7 +172,7 @@ header {
     padding: 30px;
     background-color: var(--white);
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .history h2 {
@@ -298,6 +299,6 @@ footer p {
 
 /* Accessibility focus outlines */
 a:focus {
-    outline: 3px solid rgba(115,0,115,0.16);
+    outline: 3px solid rgba(115, 0, 115, 0.16);
     outline-offset: 2px;
 }
