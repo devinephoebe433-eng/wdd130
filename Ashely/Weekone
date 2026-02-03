@@ -1,0 +1,19 @@
+ <footer>
+        <div class="footer-inner">
+            <p>&copy; 2026 | White Water Rafting Adventures | Ashely Okaka</p>
+            <nav class="socialmedia">
+                <a href="https://facebook.com" target="_blank" rel="noopener">
+                    <img src="images/facebook-square.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener">
+                    <img src="images/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
