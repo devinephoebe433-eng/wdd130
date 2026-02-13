@@ -1,0 +1,51 @@
+/* Contact Section - Two Column Layout */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-info iframe {
+    width: 100%;
+    height: 300px;
+    margin-top: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+/* Employees Grid - Three Columns */
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.employee-grid figure {
+    text-align: center;
+}
+
+.employee-grid img {
+    width: 100%;
+}
