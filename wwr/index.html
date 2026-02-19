@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Nabugobero Devine Phoebe">
     <meta name="description"
       content="Welcome to White Water Rafting Adventures. Experience the thrill of the Nile with our expert-led rafting trips in Jinja, Uganda.">
@@ -12,11 +12,11 @@
 </head>
 
 <body>
-    <header>
+    <header role="banner">
         <div class="logo-wrap">
-            <img src="images/z-crossedoars.jpeg" alt="Logo" class="logo">
+            <img src="images/z-crossedoars.jpeg" alt="White Water Rafting Adventures logo" class="logo">
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul class="site-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -26,51 +26,71 @@
         </nav>
     </header>
 
-    <main>
-        <div class="hero">
-            <img src="images/hero-overlay.jpg" alt="Rafting on the Nile">
+    <!-- hero moved outside of main so it can be full-bleed -->
+    <section class="hero" role="region" aria-label="Hero">
+        <img src="images/hero-overlay.jpg" alt="Rafting on the Nile" class="hero-img">
+        <div class="hero-caption">
             <h1 class="hero-msg">Adventure Awaits on the Nile</h1>
+            <a class="btn-primary" href="trips.html">See Trips</a>
         </div>
+    </section>
 
-        <section class="newsletter">
-            <h2>Join Our Newsletter</h2>
-            <form action="#">
-                <input type="text" name="fname" placeholder="First Name" required>
-                <input type="email" name="femail" placeholder="Email" required>
-                <button type="submit" class="btn-primary">Sign Up</button>
+    <main>
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+            <h2 id="newsletter-heading">Join Our Newsletter</h2>
+            <form action="contact.html" method="post" id="newsletter-form" novalidate>
+                <label for="fname">First name</label>
+                <input id="fname" name="fname" type="text" placeholder="First name" required>
+
+                <label for="femail">Email address</label>
+                <input id="femail" name="femail" type="email" placeholder="Email" required>
+
+                <button type="submit" class="btn-primary">Sign up for the newsletter</button>
             </form>
         </section>
 
-        <section class="home-grid">
-            <div class="grid-text">
-                <h2>Why Choose Us?</h2>
-                <p>We provide the safest and most exhilarating rafting experiences in Uganda. From
-                    family-friendly floats to Grade 5 rapids, we have a journey for everyone.</p>
+        <section class="home-grid" aria-labelledby="homegrid-heading">
+            <h2 id="homegrid-heading" class="visually-hidden">Home content</h2>
+            <div class="grid-item grid-text" role="region" aria-labelledby="why-choose-heading">
+                <h3 id="why-choose-heading">Why Choose Us?</h3>
+                <p>We provide safe and exhilarating rafting experiences in Uganda — from family-friendly floats to Grade 5 rapids.</p>
                 <a href="trips.html" class="cta-link">Explore Our Trips &rarr;</a>
             </div>
-            <img src="images/rafting-team.jpg" alt="Team Rafting" class="grid-img">
 
-            <img src="images/rapid-action.jpg" alt="Rapid Action" class="grid-img">
-            <div class="grid-text">
-                <h2>Expert Guides</h2>
-                <p>Our guides are internationally certified and have spent decades navigating the
-                    Budondo rapids. You are in safe hands.</p>
+            <div class="grid-item">
+                <img src="images/rafting-team.jpg" alt="Rafting team launching a raft" class="grid-img">
+            </div>
+
+            <div class="grid-item">
+                <img src="images/rapid-action.jpg" alt="Rafters navigating rapid" class="grid-img">
+            </div>
+
+            <div class="grid-item grid-text" role="region" aria-labelledby="guides-heading">
+                <h3 id="guides-heading">Expert Guides</h3>
+                <p>Our guides are internationally certified and experienced on the Budondo rapids — you're in safe hands.</p>
             </div>
         </section>
     </main>
 
-    <footer>
+    <aside aria-labelledby="about-guide-heading">
+        <h2 id="about-guide-heading">About the Guide</h2>
+        <img src="images/profile.jpg" alt="Portrait of Nabugobero Devine Phoebe" width="200" height="200">
+        <p>Nabugobero Devine Phoebe — local guide and outdoor enthusiast based in Jinja.</p>
+        <p><a class="cta-link" href="contact.html">Contact / Book a Trip</a></p>
+    </aside>
+
+    <footer role="contentinfo">
         <div class="footer-inner">
-            <p>© 2026 | White Water Rafting Adventures | Nabugobero Devine Phoebe</p>
-            <nav class="socialmedia">
-                <a href="https://facebook.com" target="_blank" rel="noopener">
-                    <img src="images/facebook-square.svg" alt="Visit us on Facebook">
+            <p>© 2026 White Water Rafting Adventures | Nabugobero Devine Phoebe</p>
+            <nav class="socialmedia" aria-label="Social links">
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                    <img src="images/facebook-square.svg" alt="Facebook">
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener">
-                    <img src="images/twitter.png" alt="Follow us on Twitter">
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                    <img src="images/twitter.png" alt="Twitter">
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener">
-                    <img src="images/instagram.svg" alt="View our Instagram">
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram">
                 </a>
             </nav>
         </div>

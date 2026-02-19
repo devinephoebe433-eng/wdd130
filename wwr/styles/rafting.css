@@ -12,7 +12,6 @@
 }
 
 /* --- 1. Global Reset --- */
-/* Audit Tip: Resetting margin/padding prevents unexpected overflow errors */
 * {
     margin: 0;
     padding: 0;
@@ -73,7 +72,6 @@ header {
     display: block;
 }
 
-/* Accessible nav list */
 .site-nav {
     list-style: none;
     display: flex;
@@ -120,7 +118,6 @@ header {
     opacity: 0.95;
 }
 
-/* Overlay H1 */
 .hero h1 {
     position: absolute;
     left: 50%;
@@ -135,7 +132,6 @@ header {
     text-align: center;
 }
 
-/* Article overlay */
 .hero article {
     position: absolute;
     bottom: 24px;
@@ -187,7 +183,7 @@ header {
     color: var(--accent1-color);
 }
 
-/* --- 8. Adventure Section with Figures --- */
+/* --- 8. Adventure Section (Updated for Grid Rubric) --- */
 .adventure {
     margin: 40px auto;
     padding: 30px;
@@ -200,19 +196,125 @@ header {
     padding-bottom: 10px;
 }
 
+/* Professional Grid for Rubric Criterion 11 & 12 */
 .adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.adventure-gallery figure {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* --- 9. NEW: Newsletter Section (Rubric Criterion 9) --- */
+.newsletter {
+    background-color: var(--accent2-color);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 40px auto;
+}
+
+.newsletter form {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-    align-items: stretch;
+    gap: 15px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 20px auto 0;
 }
 
-.adventure > p {
+.newsletter label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.newsletter input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.btn-signup {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-signup:hover {
+    background-color: var(--accent1-color);
+}
+
+/* --- 10. NEW: Trips Table (Rubric Criterion 16) --- */
+.trips-table-container {
+    overflow-x: auto;
+    margin: 40px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* --- 11. Call to Action (Rubric Criterion 10 & 14) --- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
     margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
-/* --- 9. Footer --- */
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* --- 12. Footer --- */
 footer {
     margin-top: 40px;
     background: transparent;
@@ -280,11 +382,7 @@ footer p {
     }
 
     .adventure-gallery {
-        flex-direction: column;
-    }
-
-    figure {
-        flex: 1 1 100%;
+        grid-template-columns: 1fr;
     }
 
     .footer-inner {
@@ -297,7 +395,6 @@ footer p {
     }
 }
 
-/* Accessibility focus outlines */
 a:focus {
     outline: 3px solid rgba(115, 0, 115, 0.16);
     outline-offset: 2px;

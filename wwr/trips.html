@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Nabugobero Devine Phoebe">
     <meta name="description"
-      content="Explore our exciting white water rafting trips on the Nile. From family-friendly floats to Grade 5 adrenaline rushes, we have the perfect adventure for you.">
+      content="Explore our white water rafting trips on the Nile: family floats, adrenaline rapids, and overnight expeditions with expert guides.">
     <title>Trips | White Water Rafting Adventures</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-    <header>
+    <header role="banner">
         <div class="logo-wrap">
-            <img src="images/z-crossedoars.jpeg" alt="White Water Rafting Logo" class="logo">
+            <img src="images/z-crossedoars.jpeg" alt="White Water Rafting Adventures logo" class="logo">
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul class="site-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -26,90 +26,116 @@
         </nav>
     </header>
 
-    <main class="trips-page">
-        <h1>Our Rafting Adventures</h1>
+    <main class="trips-page" role="main">
+        <div class="content">
+            <h1>Our Rafting Adventures</h1>
 
-        <div class="contact-cta">
-            <p>Looking for a custom group package or a private tour? <a href="contact.html">Contact
-                    Us Today</a> to plan your perfect trip!</p>
+            <div class="contact-cta">
+                <p>Looking for a custom group package or a private tour? <a href="contact.html">Contact us today</a> to plan your perfect trip.</p>
+            </div>
+
+            <section class="trip-cards" aria-label="Trip details">
+                <article class="trip-card">
+                    <figure>
+                        <img src="images/family-float.jpg" alt="Family rafting on gentle river" width="600" height="400">
+                        <figcaption class="visually-hidden">The Family Float</figcaption>
+                    </figure>
+                    <h2>The Family Float</h2>
+                    <p>A gentle 2-hour journey perfect for children and those looking for a relaxing scenic tour. Focus on wildlife and riverbank views.</p>
+                </article>
+
+                <article class="trip-card">
+                    <figure>
+                        <img src="images/rapid-action.jpg" alt="Rafters navigating a large rapid" width="600" height="400">
+                        <figcaption class="visually-hidden">Wild Nile Rapid</figcaption>
+                    </figure>
+                    <h2>Wild Nile Rapid</h2>
+                    <p>Our most popular adrenaline-packed adventure. Conquer famous Grade 5 rapids over a full day of excitement and river swimming.</p>
+                </article>
+
+                <article class="trip-card">
+                    <figure>
+                        <img src="images/campfire.jpg" alt="Campfire beside rafts at dusk" width="600" height="400">
+                        <figcaption class="visually-hidden">The Overnight Expedition</figcaption>
+                    </figure>
+                    <h2>The Overnight Expedition</h2>
+                    <p>Two days of rafting with an unforgettable night of camping under the stars on a private island. Includes meals and camping gear.</p>
+                </article>
+            </section>
+
+            <section class="trip-table-wrap" aria-labelledby="schedule-heading">
+                <h2 id="schedule-heading">Trip Schedule & Pricing</h2>
+                <p id="pricing-note">All trips include safety gear and professional guides. Prices shown are per person (USD).</p>
+
+                <div class="table-responsive">
+                    <table class="trips-table" aria-describedby="pricing-note">
+                        <caption>Trip schedule and pricing</caption>
+                        <colgroup>
+                            <col style="width:45%;">
+                            <col style="width:20%;">
+                            <col style="width:20%;">
+                            <col style="width:15%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Trip Name</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Difficulty</th>
+                                <th scope="col">Price (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>The Family Float</td>
+                                <td>2 hours</td>
+                                <td>Easy</td>
+                                <td><data value="50">$50</data></td>
+                            </tr>
+                            <tr>
+                                <td>Wild Nile Rapid</td>
+                                <td>Full day</td>
+                                <td>Hard (Grade 5)</td>
+                                <td><data value="140">$140</data></td>
+                            </tr>
+                            <tr>
+                                <td>The Overnight Expedition</td>
+                                <td>2 days</td>
+                                <td>Advanced</td>
+                                <td><data value="280">$280</data></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">Note</td>
+                                <td>Prices subject to change; contact us for group rates.</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <p><a class="btn-primary" href="contact.html">Book or Contact Us</a></p>
+            </section>
         </div>
 
-        <section class="trip-cards">
-            <article class="trip-card">
-                <img src="images/family-float.jpg" alt="A family smiling while rafting on calm waters">
-                <h2>The Family Float</h2>
-                <p>A gentle 2-hour journey perfect for children and those looking for a relaxing
-                    scenic tour of the river banks. This trip focuses on wildlife spotting and
-                    beautiful landscapes.</p>
-            </article>
-
-            <article class="trip-card">
-                <img src="images/rapid-action.jpg" alt="Rafters navigating a large wave on a rapid">
-                <h2>Wild Nile Rapid</h2>
-                <p>Our most popular adrenaline-packed adventure! Conquer famous Grade 5 rapids like
-                    'The Bad Place' over a full day of excitement and river swimming.</p>
-            </article>
-
-            <article class="trip-card">
-                <img src="images/campfire.jpg"
-                  alt="A campfire setup next to rafting boats on a river bank">
-                <h2>The Overnight Expedition</h2>
-                <p>Two full days of rafting combined with an unforgettable night of camping under
-                    the stars on a private island. Includes all meals and camping gear.</p>
-            </article>
-        </section>
-
-        <section class="trip-table-wrap">
-            <h2>Trip Schedule & Pricing</h2>
-            <p>Check out our current availability and pricing below. All trips include safety gear
-                and professional guides.</p>
-
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Trip Name</th>
-                        <th>Duration</th>
-                        <th>Difficulty</th>
-                        <th>Price (USD)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>The Family Float</td>
-                        <td>2 Hours</td>
-                        <td>Easy</td>
-                        <td>$50</td>
-                    </tr>
-                    <tr>
-                        <td>Wild Nile Rapid</td>
-                        <td>Full Day</td>
-                        <td>Hard (Grade 5)</td>
-                        <td>$140</td>
-                    </tr>
-                    <tr>
-                        <td>The Overnight Expedition</td>
-                        <td>2 Days</td>
-                        <td>Extreme</td>
-                        <td>$280</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <aside aria-labelledby="booking-heading">
+            <h2 id="booking-heading">Book a Trip</h2>
+            <p>Need help choosing a trip or arranging transport? Our team can assist with logistics and group bookings.</p>
+            <p><a class="btn" href="contact.html">Contact / Book</a></p>
+        </aside>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-inner">
-            <p>© 2026 | White Water Rafting Adventures | Nabugobero Devine Phoebe</p>
-            <nav class="socialmedia">
-                <a href="https://facebook.com" target="_blank" rel="noopener">
-                    <img src="images/facebook-square.svg" alt="Visit us on Facebook">
+            <p>© 2026 White Water Rafting Adventures | Nabugobero Devine Phoebe</p>
+            <nav class="socialmedia" aria-label="Social links">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img src="images/facebook-square.svg" alt="Facebook">
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener">
-                    <img src="images/twitter.png" alt="Follow us on Twitter">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <img src="images/twitter.png" alt="Twitter">
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener">
-                    <img src="images/instagram.svg" alt="View our Instagram">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram">
                 </a>
             </nav>
         </div>
